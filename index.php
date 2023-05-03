@@ -9,7 +9,16 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
     </head>
 <body>
-   <!---------------------------------------- Ajex ------------------------------------------------------------- -->
+    <style>
+        .midd{
+             text-align: center;
+             border: 2px solid;
+             margin-top: 1rem;
+             padding: 20px 20px 20px 20px;
+             margin: 40px 500px 40px 500px;
+             background-color: rgba(50, 115, 220, 0.3);
+        }  
+    </style>
    <script>
       $(document).ready(function() {
        $('#name1').on('input', function () {
@@ -29,10 +38,10 @@
    
         if (!checkuser() && !checkemail() && !checkmobile() && !checkcity()) {
            
-            $("#message").html(`<div class="alert alert-warning">Please fill all required field</div>`);
+            $("#message").html(`<div >Please fill all required field</div>`);
         } 
         else if (!checkuser() || !checkemail() || !checkmobile() || !checkcity()) {
-            $("#message").html(`<div class="alert alert-warning">Please fill all required field</div>`);
+            $("#message").html(`<div>Please fill all required field</div>`);
            
         }
         else {
@@ -118,22 +127,23 @@
             }
         }
     </script>
+    <div class="midd">
     <h1>Employee  Registration From!</h1>
     <div id="message"> </div>
     <form aciton ="" id="myform" name="myForm"  method="post">
         <div class="formdesign" id="name">
-            Name: <input type="text" name="name1" id="name1" ><b><span id="formerror"> </span></b>
+            Name: <input type="text" name="name1" id="name1" ><b><span id="formerror"> </span></b><br><br>
         </div>
 
         <div class="formdesign" id="email">
-            Email: <input type="text" name="email1" id="email1" ><b><span id="error"> </span></b>
+            Email: <input type="text" name="email1" id="email1" ><b><span id="error"> </span></b><br><br>
         </div>
 
         <div class="formdesign" id="phone">
-            Phone: <input type="text" name="mobile1" id="mobile1"><b><span id="mobile_err"></span></b>
+            Phone: <input type="text" name="mobile1" id="mobile1"><b><span id="mobile_err"></span></b><br><br>
         </div>
             <div class="formdesign" id="pass">
-               City:  <input list="country" name="city1" id="city1"><b><span id="city_err" ></span></b>
+               City:  <input list="country" name="city1" id="city1"><b><span id="city_err" ></span></b><br><br>
                <datalist id="country">
                   <option value="Noida" >
                   <option value="Delhi" >
@@ -142,9 +152,10 @@
                   <option value="Ghaziabad" >
                </datalist>
            </div> 
-         <button type="button" id="submitbtn" class="btn btn-primary  ">Submit</button>
+         <button type="button" id="submitbtn" >Submit</button>
         </div>
         </div>
     </form>
+    </div>
 </body>
 </html>
